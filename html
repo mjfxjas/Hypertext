@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options Pricing Calculator</title>
+    <script>
+        function calculateBlackScholes() {
+            // Fetch the user input
+            var symbol = document.getElementById('symbolInput').value.toUpperCase();
+
+            // Basic input validation
+            if (!symbol) {
+                alert('Please enter a symbol.');
+                return;
+            }
+
+            // Add your Black-Scholes calculation logic here using JavaScript
+            // Perform calculations, and display the result or handle errors
+            try {
+                // Perform Black-Scholes calculations here
+                // Update the resultContainer with the calculated values
+                var resultContainer = document.getElementById('resultContainer');
+                resultContainer.innerHTML = 'Black-Scholes pricing result for ' + symbol + ': [Your Result Here]';
+            } catch (error) {
+                alert('An error occurred during calculation: ' + error.message);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Options Pricing Calculator</h1>
+    
+    <label for="symbolInput">Enter Symbol:</label>
+    <input type="text" id="symbolInput" placeholder="AAPL">
+    
+    <button onclick="calculateBlackScholes()">Calculate</button>
+    
+    <div id="resultContainer">
+        <!-- Display Black-Scholes pricing result here -->
+    </div>
+</body>
+</html>
